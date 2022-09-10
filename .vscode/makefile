@@ -1,9 +1,9 @@
 #source file search paths
-VPATH = ./src 
+VPATH = ./src ./src/ravencode
 
 	# compiler include search paths
 INCS = -I./include \
-	-I../ravencode/pub/src \
+	-I./src/ravencode \
 	-I../raven-set \
 	-I../boost/boost1_78 
 
@@ -26,7 +26,8 @@ CCflags = -std=c++17 $(OPT) -D_mingw_
 
 # sources
 OBJ_starter = \
-	$(ODIR)/main.o 
+	$(ODIR)/main.o \
+	$(ODIR)/cGraph.o \
 
 ### COMPILE
 
